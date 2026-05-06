@@ -1,0 +1,17 @@
+title: IVA
+description: Operational value made visible.
+url: "https://ivasolution.com"
+baseurl: ""
+
+legal_name: "Integrated Value Architecture LLC"
+email: "evan.foster@integratedvaluearchitecture.com"
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
