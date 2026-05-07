@@ -1,22 +1,43 @@
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>
-      <a class="footer-brand" href="{{ '/' | relative_url }}">IVA</a>
-      <p>Operational value made visible.</p>
-    </div>
+    <div class="footer-brand-area">
+      <a class="footer-brand" href="{{ '/' | relative_url }}" aria-label="IVA home">
+        <img src="{{ '/assets/images/tmlogo.png' | relative_url }}" alt="IVA logo">
+      </a>
 
-    <div class="footer-legal">
-      <p>© {{ site.time | date: "%Y" }} Integrated Value Architecture LLC. All rights reserved.</p>
-      <p>IVA is the public brand of Integrated Value Architecture LLC.</p>
-      <p>
-        <a href="/services/">Services</a>
-        ·
-        <a href="/value/">Value</a>
-        ·
-        <a href="/proof/">Proof</a>
-        ·
-        <a href="/contact/">Contact</a>
+      <p class="footer-tagline">
+        Operational value made visible.
       </p>
     </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <p class="footer-heading">Explore</p>
+
+        <a href="/services/">Services</a>
+        <a href="/value/">Value</a>
+        <a href="/proof/">Proof</a>
+        <a href="/publications/">Publications</a>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Start</p>
+
+        <a href="/advisory-call/">Advisory Call</a>
+        <a href="/structural-diagnostic/">Structural Diagnostic</a>
+        <a href="/workshops/">Workshops</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>
+      © {{ site.time | date: "%Y" }} Integrated Value Architecture LLC. All rights reserved.
+    </p>
+
+    <p>
+      IVA is the public brand of Integrated Value Architecture LLC.
+    </p>
   </div>
 </footer>
