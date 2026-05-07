@@ -1,21 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}IVA</title>
-    <meta name="description" content="{{ page.description | default: site.description }}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  </head>
+<head>
+  <meta charset="utf-8">
 
-  <body>
-    {% include header.html %}
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-    <main>
-      {{ content }}
-    </main>
+  <title>
+    {% if page.title %}
+      {{ page.title }} | IVA
+    {% else %}
+      IVA
+    {% endif %}
+  </title>
 
-    {% include footer.html %}
-  </body>
+  <meta
+    name="description"
+    content="{{ page.description | default: site.description }}"
+  >
+
+  <link
+    rel="stylesheet"
+    href="{{ '/assets/css/style.css' | relative_url }}"
+  >
+
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="{{ '/assets/images/favicon.ico' | relative_url }}"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="{{ '/assets/images/favicon-32x32.png' | relative_url }}"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}"
+  >
+
+  <meta name="theme-color" content="#1F2A44">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+  {% include header.html %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+</body>
 </html>
