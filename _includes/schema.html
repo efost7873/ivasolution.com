@@ -1,0 +1,61 @@
+{% assign page_title = page.title | default: site.title %}
+{% assign page_description = page.description | default: site.description %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "IVA",
+      "legalName": {{ site.legal_name | jsonify }},
+      "url": "{{ site.url }}/",
+      "logo": "{{ site.url }}/assets/images/tmlogo.png",
+      "image": "{{ site.url }}/assets/images/social-preview.png",
+      "email": "mailto:{{ site.email }}",
+      "description": {{ site.description | jsonify }},
+      "slogan": {{ site.tagline | jsonify }},
+      "founder": {
+        "@type": "Person",
+        "name": "Evan Foster"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": {{ site.email | jsonify }},
+        "areaServed": "US",
+        "availableLanguage": "en"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "IVA",
+      "description": {{ site.description | jsonify }},
+      "publisher": {
+        "@id": "{{ site.url }}/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}#webpage",
+      "url": "{{ site.url }}{{ page.url }}",
+      "name": {{ page_title | append: ' | IVA' | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "isPartOf": {
+        "@id": "{{ site.url }}/#website"
+      },
+      "about": {
+        "@id": "{{ site.url }}/#organization"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>

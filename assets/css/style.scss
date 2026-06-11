@@ -358,6 +358,32 @@ h1 {
   margin-top: 14px;
 }
 
+
+.price-line {
+  color: var(--iva-blue) !important;
+  font-weight: 750;
+}
+
+.policy-list p {
+  color: var(--iva-muted);
+}
+
+.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+
+  color: var(--iva-amber-dark) !important;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .highlight {
   padding: 34px;
 
@@ -477,6 +503,10 @@ h1 {
 }
 
 @media (max-width: 980px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
   .hero-grid,
   .card-grid,
   .footer-inner {
@@ -603,5 +633,59 @@ h1 {
 
   h1 {
     font-size: clamp(2.48rem, 15vw, 4rem);
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 1000;
+
+  padding: 0.7rem 0.9rem;
+
+  background: var(--iva-blue);
+  color: white;
+
+  border-radius: 999px;
+
+  transform: translateY(-160%);
+  transition: transform var(--iva-transition);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.five-grid {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.service-card {
+  justify-content: flex-start;
+}
+
+.card-note {
+  color: var(--iva-slate) !important;
+  font-size: 0.94rem;
+}
+
+.footer-contact {
+  margin-top: 10px !important;
+}
+
+.footer-contact a {
+  color: var(--iva-blue);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 980px) {
+  .five-grid {
+    grid-template-columns: 1fr;
   }
 }

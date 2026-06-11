@@ -1,10 +1,16 @@
 title: IVA
-description: Operational value made visible.
+tagline: Organizational value made visible.
+description: IVA implements a five-ledger value system to make organizational value visible.
 url: "https://ivasolution.com"
 baseurl: ""
+lang: en
+timezone: America/Chicago
 
 legal_name: "Integrated Value Architecture LLC"
-email: "evan.foster@integratedvaluearchitecture.com"
+email: "evan@ivasolution.com"
+author:
+  name: "Evan Foster"
+logo: "/assets/images/tmlogo.png"
 
 markdown: kramdown
 permalink: pretty
@@ -12,6 +18,13 @@ permalink: pretty
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/images/social-preview.png"
+      robots: "index,follow,max-image-preview:large"
 
 exclude:
   - README.md

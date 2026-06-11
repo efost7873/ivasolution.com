@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Disallow: /booking/
 
 Sitemap: https://ivasolution.com/sitemap.xml

@@ -1,16 +1,23 @@
 ---
 layout: default
 title: Page Not Found
-description: This page does not exist.
+description: The requested IVA page could not be found.
+robots: noindex,follow
 ---
 
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <h2>That page is not here.</h2>
-      <p>The old site had more doors than it needed. This one is being rebuilt around value, not maze navigation.</p>
+      <h1>That page is not available.</h1>
+
+      <p>
+        The page may have moved, or the address may be incorrect. Start from the homepage or use the service page to find the current IVA path.
+      </p>
     </div>
 
-    <a class="button" href="{{ '/' | relative_url }}">Return home</a>
+    <div class="hero-actions">
+      <a class="button" href="{{ '/' | relative_url }}">Return home</a>
+      <a class="button secondary" href="/services/">View services</a>
+    </div>
   </div>
 </section>

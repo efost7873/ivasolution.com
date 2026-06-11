@@ -1,0 +1,37 @@
+# IVA
+
+IVA implements a five-ledger value system to make organizational value visible.
+
+Public brand: IVA
+Legal name: Integrated Value Architecture LLC
+Contact: evan@ivasolution.com
+Location language: Based in Illinois. Working nationally.
+Founder: Evan Foster
+
+## Core position
+
+IVA helps organizations identify where value is being delayed, duplicated, hidden, protected, or lost across Financial, Operational, Capacity, Learning and Innovation, and Externalities and Equity ledgers.
+
+IVA is not a generic consulting framework. It is a five-ledger value system used to clarify operating issues, decision paths, reporting burdens, capacity constraints, evidence gaps, learning loss, external obligations, and equity impacts.
+
+## Primary pages
+
+- Home: https://ivasolution.com/
+- Services: https://ivasolution.com/services/
+- Five-Ledger Advisory Call: https://ivasolution.com/advisory-call/
+- Value: https://ivasolution.com/value/
+- Proof: https://ivasolution.com/proof/
+- Publications: https://ivasolution.com/publications/
+- Contact: https://ivasolution.com/contact/
+- Service and Fee Policy: https://ivasolution.com/service-fee-policy/
+
+## Services
+
+- Five-Ledger Advisory Call: $200/hour, 1-hour minimum, prepaid before scheduling.
+- In-Person or Group Five-Ledger Session: $200/hour, 2-hour minimum, travel terms may apply.
+- Five-Ledger Value Snapshot: starting at $3,000.
+- Structural Diagnostic: starting at $12,000.
+- Five-Ledger Workshop or Briefing: $200/hour for preparation, delivery, and follow-up unless quoted as fixed-fee.
+- Five-Ledger Implementation Sprint: starting at $25,000.
+- Full Five-Ledger Value System Implementation: by proposal.
+- Value Governance Support: starting at $2,500/month.

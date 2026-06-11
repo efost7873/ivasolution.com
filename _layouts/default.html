@@ -22,8 +22,18 @@
   >
 
   <meta
+    name="robots"
+    content="{{ page.robots | default: 'index,follow,max-image-preview:large' }}"
+  >
+
+  <meta
     name="author"
     content="Evan Foster"
+  >
+
+  <meta
+    property="og:locale"
+    content="en_US"
   >
 
   <meta
@@ -48,12 +58,12 @@
 
   <meta
     property="og:url"
-    content="https://ivasolution.com{{ page.url }}"
+    content="{{ site.url }}{{ page.url }}"
   >
 
   <meta
     property="og:image"
-    content="https://ivasolution.com/assets/images/social-preview.png"
+    content="{{ site.url }}{{ page.image | default: '/assets/images/social-preview.png' }}"
   >
 
   <meta
@@ -69,6 +79,11 @@
   <meta
     property="og:image:type"
     content="image/png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="IVA - organizational value made visible"
   >
 
   <meta
@@ -88,12 +103,12 @@
 
   <meta
     name="twitter:image"
-    content="https://ivasolution.com/assets/images/social-preview.png"
+    content="{{ site.url }}{{ page.image | default: '/assets/images/social-preview.png' }}"
   >
 
   <link
     rel="canonical"
-    href="https://ivasolution.com{{ page.url }}"
+    href="{{ site.url }}{{ page.url }}"
   >
 
   <link
@@ -129,12 +144,16 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
+
+  {% include schema.html %}
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   {% include header.html %}
 
-  <main>
+  <main id="main-content">
     {{ content }}
   </main>
 
