@@ -522,5 +522,101 @@ permalink: /rule52/
   checks.forEach(input=>input.addEventListener('change', update));
 })();
 </script>
+  <script>
+(function () {
+  function trackRule52(eventName) {
+    if (typeof window.clarity === "function") {
+      window.clarity("event", eventName);
+    }
+  }
+
+  function checkoutTierFromUrl(href) {
+    if (href.includes("dRm8wQ2fifSM1SmfTJfrW09")) return "starter";
+    if (href.includes("bJedRag684a454y6j9frW08")) return "pro";
+    if (href.includes("9B65kEaLO7mg8gKbDtfrW07")) return "consultant";
+    if (href.includes("00w28sg685e868C0YPfrW06")) return "agency";
+    return null;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Track pricing section view.
+    const pricing = document.getElementById("pricing");
+    if (pricing && "IntersectionObserver" in window) {
+      let pricingSeen = false;
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!pricingSeen && entry.isIntersecting) {
+            pricingSeen = true;
+            trackRule52("rule52_view_pricing");
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.35 });
+
+      observer.observe(pricing);
+    }
+
+    // Track key link clicks.
+    document.querySelectorAll("a[href]").forEach(function (link) {
+      link.addEventListener("click", function () {
+        const href = link.getAttribute("href") || "";
+
+        const tier = checkoutTierFromUrl(href);
+        if (tier) {
+          trackRule52("rule52_checkout_click_" + tier);
+          return;
+        }
+
+        if (href.includes("generator.ivasolution.com/recover")) {
+          trackRule52("rule52_recover_click");
+          return;
+        }
+
+        if (href.startsWith("mailto:")) {
+          trackRule52("rule52_support_click");
+          return;
+        }
+
+        if (href.includes("/rule52/") && href.endsWith(".html")) {
+          trackRule52("rule52_guide_click");
+          return;
+        }
+
+        if (href === "#pricing" || href.includes("/rule52/#pricing")) {
+          trackRule52("rule52_pricing_anchor_click");
+        }
+      });
+    });
+
+    // Track risk check use.
+    const checks = Array.from(document.querySelectorAll("#riskChecks input[type='checkbox']"));
+    let riskStarted = false;
+
+    function getRiskScore() {
+      return checks.reduce(function (sum, input) {
+        return sum + (input.checked ? Number(input.value) : 0);
+      }, 0);
+    }
+
+    function riskLevel(score) {
+      if (score >= 6) return "high";
+      if (score >= 3) return "moderate";
+      return "low";
+    }
+
+    checks.forEach(function (input) {
+      input.addEventListener("change", function () {
+        if (!riskStarted) {
+          riskStarted = true;
+          trackRule52("rule52_risk_check_started");
+        }
+
+        const score = getRiskScore();
+        trackRule52("rule52_risk_check_result_" + riskLevel(score));
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
