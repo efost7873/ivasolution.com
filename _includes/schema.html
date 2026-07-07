@@ -55,7 +55,26 @@
         "@id": "{{ site.url }}/#organization"
       },
       "inLanguage": "en"
+    }{% unless page.url == "/" %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ site.url }}{{ page.url }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.url }}/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page_title | jsonify }},
+          "item": "{{ site.url }}{{ page.url }}"
+        }
+      ]
     }
+    {% endunless %}
   ]
 }
 </script>
