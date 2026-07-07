@@ -1,8 +1,8 @@
 # IVA
 
-IVA implements a five-ledger value system to make organizational value visible.
+IVA is a decision architecture practice for public, nonprofit, grant-funded, and mission-driven organizations.
 
-Public brand: IVA
+Public brand: IVA Decision Architecture
 Legal name: Integrated Value Architecture LLC
 Contact: evan@ivasolution.com
 Location language: Based in Illinois. Working nationally.
@@ -10,28 +10,61 @@ Founder: Evan Foster
 
 ## Core position
 
-IVA helps organizations identify where value is being delayed, duplicated, hidden, protected, or lost across Financial, Operational, Capacity, Learning and Innovation, and Externalities and Equity ledgers.
+IVA helps organizations make decisions ready for approval, funding, implementation, and accountability.
 
-IVA is not a generic consulting framework. It is a five-ledger value system used to clarify operating issues, decision paths, reporting burdens, capacity constraints, evidence gaps, learning loss, external obligations, and equity impacts.
+Decision Readiness means a decision has enough evidence, authority, capacity, funding alignment, and accountability to survive implementation.
+
+IVA's category line: A decision is not ready until evidence, authority, capacity, funding, and accountability line up.
+
+Relationship line: IVA structures complex decisions. Rule 52 applies that discipline to workplace AI use.
+
+Rule 52 is an AI use readiness system and AI policy generator operated by Integrated Value Architecture LLC.
 
 ## Primary pages
 
 - Home: https://ivasolution.com/
+- Decision Readiness: https://ivasolution.com/decision-readiness/
+- Decision Friction Taxonomy: https://ivasolution.com/decision-friction-taxonomy/
 - Services: https://ivasolution.com/services/
-- Five-Ledger Advisory Call: https://ivasolution.com/advisory-call/
-- Value: https://ivasolution.com/value/
+- Decision Readiness Call: https://ivasolution.com/advisory-call/
+- Value Ledgers: https://ivasolution.com/value/
 - Proof: https://ivasolution.com/proof/
 - Publications: https://ivasolution.com/publications/
+- Rule 52: https://ivasolution.com/rule52/
 - Contact: https://ivasolution.com/contact/
 - Service and Fee Policy: https://ivasolution.com/service-fee-policy/
 
-## Services
+## IVA services
 
-- Five-Ledger Advisory Call: $200/hour, 1-hour minimum, prepaid before scheduling.
-- In-Person or Group Five-Ledger Session: $200/hour, 2-hour minimum, travel terms may apply.
-- Five-Ledger Value Snapshot: starting at $3,000.
-- Structural Diagnostic: starting at $12,000.
-- Five-Ledger Workshop or Briefing: $200/hour for preparation, delivery, and follow-up unless quoted as fixed-fee.
-- Five-Ledger Implementation Sprint: starting at $25,000.
-- Full Five-Ledger Value System Implementation: by proposal.
-- Value Governance Support: starting at $2,500/month.
+- Decision Readiness Call: $200/hour, 1-hour minimum, prepaid before scheduling.
+- Group, Executive, or Board Session: $200/hour, 2-hour minimum, travel terms may apply.
+- Decision Triage: $500 fixed fee.
+- Rule 52 AI Policy Triage: $500 fixed fee.
+- Board Packet Rescue: $1,500 to $3,500.
+- Grant or Funder Report Cleanup: $1,500 to $5,000.
+- Decision Readiness Sprint: $5,000 to $12,000.
+- Public or Infrastructure Decision Architecture: starting at $15,000, quoted by scope.
+- Implementation Accountability Support: starting at $2,500/month.
+
+## Decision Readiness Score
+
+IVA scores readiness from 0 to 25 across five dimensions:
+
+- Evidence clarity
+- Authority clarity
+- Capacity realism
+- Funding alignment
+- Accountability and obligation clarity
+
+## Decision Friction Taxonomy
+
+IVA names common friction patterns:
+
+- Decision debt
+- Approval drag
+- Evidence gap
+- Capacity leak
+- Board packet drift
+- Implementation drift
+- External obligation gap
+- Ledger imbalance
