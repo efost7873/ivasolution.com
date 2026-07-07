@@ -38,7 +38,7 @@
 
   <meta
     property="og:type"
-    content="website"
+    content="{% if page.schema_type == 'Article' %}article{% else %}website{% endif %}"
   >
 
   <meta
@@ -68,12 +68,12 @@
 
   <meta
     property="og:image:width"
-    content="1200"
+    content="{{ page.image_width | default: site.social_image_width | default: 1200 }}"
   >
 
   <meta
     property="og:image:height"
-    content="630"
+    content="{{ page.image_height | default: site.social_image_height | default: 630 }}"
   >
 
   <meta
@@ -141,9 +141,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+  >
+
+  <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
   >
+
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+  </noscript>
 
   {% include schema.html %}
 </head>

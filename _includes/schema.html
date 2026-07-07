@@ -1,5 +1,6 @@
 {% assign page_title = page.title | default: site.title %}
 {% assign page_description = page.description | default: site.description %}
+{% assign page_image = page.image | default: '/assets/images/social-preview.png' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,7 +56,39 @@
         "@id": "{{ site.url }}/#organization"
       },
       "inLanguage": "en"
-    }{% unless page.url == "/" %},
+    }{% if page.schema_type == "Article" %},
+    {
+      "@type": "Article",
+      "@id": "{{ site.url }}{{ page.url }}#article",
+      "headline": {{ page_title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "image": "{{ site.url }}{{ page_image }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author.name }}"
+      },
+      "publisher": {
+        "@id": "{{ site.url }}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "{{ site.url }}{{ page.url }}#webpage"
+      },
+      "inLanguage": "en"
+    }{% elsif page.schema_type == "Service" %},
+    {
+      "@type": "Service",
+      "@id": "{{ site.url }}{{ page.url }}#service",
+      "name": {{ page_title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "provider": {
+        "@id": "{{ site.url }}/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "url": "{{ site.url }}{{ page.url }}"
+    }{% endif %}{% unless page.url == "/" %},
     {
       "@type": "BreadcrumbList",
       "@id": "{{ site.url }}{{ page.url }}#breadcrumb",

@@ -11,6 +11,8 @@ email: "evan@ivasolution.com"
 author:
   name: "Evan Foster"
 logo: "/assets/images/tmlogo.png"
+social_image_width: 1024
+social_image_height: 1024
 
 markdown: kramdown
 permalink: pretty
@@ -28,3 +30,5 @@ defaults:
 
 exclude:
   - README.md
+  - seo-improvements.patch
+  - breadcrumb-schema.patch
